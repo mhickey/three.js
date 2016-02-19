@@ -213,8 +213,8 @@ THREE.OBJLoader.prototype = {
 
 		var face_pattern4 = /f( +(-?\d+)\/\/(-?\d+))( +(-?\d+)\/\/(-?\d+))( +(-?\d+)\/\/(-?\d+))( +(-?\d+)\/\/(-?\d+))?/;
 
-		//
-
+		// long lines can be split with a backslash...
+		text = text.replace(/\\(\r\n|\r|\n)/g,'');
 		var lines = text.split( '\n' );
 
 		for ( var i = 0; i < lines.length; i ++ ) {
